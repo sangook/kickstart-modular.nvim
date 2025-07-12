@@ -71,11 +71,6 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
--- NOTE: TAB SPACE = 4
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-
--- NOTE: Float Border
-vim.o.winborder = 'single'
+vim.o.winborder = 'rounded'
 
 -- vim: ts=2 sts=2 sw=2 et
