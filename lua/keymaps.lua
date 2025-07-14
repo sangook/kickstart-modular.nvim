@@ -52,6 +52,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- NOTE: 개인설정 추가.
-require 'custom.c_keymaps'
+
+-- Diagnostic virtualtext or virtuallines
+vim.keymap.set('n', '<leader>tl', function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end, { desc = 'LSP: [T]oggle Error [L]ens' })
+
+-- Buffer
+vim.keymap.set('n', '<leader>x', '<cmd>bd<cr>', { desc = 'Delete Buffer' })
+vim.keymap.set('n', '<leader>n', '<cmd>bn<cr>', { desc = 'Go to Next Buffer' })
+vim.keymap.set('n', '<leader>p', '<cmd>bp<cr>', { desc = 'Go to Prev Buffer' })
 
 -- vim: ts=2 sts=2 sw=2 et
